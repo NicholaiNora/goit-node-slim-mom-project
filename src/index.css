@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    background-image: url("./assets/banana-desktop.png"),
+      url("./assets/leaves-desktop.png"), url("./assets/strawberry-desktop.png"),url("./assets/backdrop.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: top right, top center, bottom right, bottom right;
+    background-size: 498px 450px, 746px 820px, 362px 374px, 603px 816px;
+
+    /* 
+
+  margin: 0;
+  padding: 0; */
+  }
+}
+
+@layer components {
+  .container {
+    height: 100vh;
+    @apply xl:px-4 xl:pt-20 xl:pb-28;
+  }
+
+  .nav {
+    @apply text-[#9B9FAA] font-[verdana] text-sm font-bold 
+    tracking-normal uppercase cursor-pointer hover:text-[#212121];
+  }
+
+  .btn {
+    @apply flex px-[25px] py-[13px] justify-center items-center rounded-[30px] cursor-pointer bg-[#FC842D] shadow-orange-500 text-[#FFF] text-center font-[verdana] text-sm font-bold;
+  }
+
+  .btn:hover {
+    box-shadow: 0px 4px 10px 0px rgba(252, 132, 45, 0.5);
+  }
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
